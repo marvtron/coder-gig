@@ -1,0 +1,27 @@
+{
+  "name": "coder-gig",
+  "version": "1.0.0",
+  "description": "Simple job find app for coders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvtron/coder-gig.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvtron/coder-gig/issues"
+  },
+  "homepage": "https://github.com/marvtron/coder-gig#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "eslint": "^5.16.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "path": "^0.12.7"
+  }
+}
