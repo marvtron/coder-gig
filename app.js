@@ -4,12 +4,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 
 // Database
-db = require('./config/database');
+const db = require('./config/database');
 
-// Test Database
- db.authenticate()
+// Test DB
+db.authenticate()
   .then(() => console.log('Database connected...'))
-  .catch(err => console.log('Error: ' + err));
+  .catch(err => console.log('Error: ' + err))
 
 const app = express();
 
@@ -20,18 +20,15 @@ app.set('view engine', 'handlebars');
 // Body Parser
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// Set Static Folder
+// Set static folder
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Index Route
+// Index route
 app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
 
-// Gigs Route
+// Gig routes
 app.use('/gigs', require('./routes/gigs'));
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Server started on port https://localhost://${PORT}`));
-
-
-
+app.listen(PORT, console.log(`Server started on port ${PORT}`));
